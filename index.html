@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conmutador · Línea de tiempo de Gestión de Redes</title>
+<meta name="description" content="Nueve temas de gestión de redes enchufados a un mismo cable: una línea de tiempo interactiva.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="mast">
+  <div class="mast__title">
+    <p class="kicker"><span class="kicker__dot"></span>Gestión de Redes · Votación del curso</p>
+    <h1>Nueve temas,<br><em>un solo cable.</em></h1>
+  </div>
+
+  <div class="mast__controls">
+    <div class="seg" role="radiogroup" aria-label="Orden">
+      <button class="seg__b is-on" role="radio" aria-checked="true" data-order="chrono">Cronología</button>
+      <button class="seg__b" role="radio" aria-checked="false" data-order="team">Por equipo</button>
+      <span class="seg__thumb" aria-hidden="true"></span>
+    </div>
+    <div class="chips" id="chips" role="group" aria-label="Filtrar por familia">
+      <button class="chip is-on" data-cat="all">Todos</button>
+      <button class="chip" data-cat="arch" style="--c:var(--blue)">Arquitectura</button>
+      <button class="chip" data-cat="serv" style="--c:var(--ochre)">Servicios</button>
+      <button class="chip" data-cat="seg"  style="--c:var(--plum)">Seguridad</button>
+      <button class="chip" data-cat="gest" style="--c:var(--green)">Gestión</button>
+    </div>
+  </div>
+</header>
+
+<main class="stage" id="stage">
+  <div class="bigyear" aria-hidden="true">
+    <span class="bigyear__n" id="bigyear">1982</span>
+    <span class="bigyear__c" id="bigcap"></span>
+  </div>
+
+  <div class="scroller" id="scroller" tabindex="0" aria-label="Línea de tiempo. Usa las flechas para moverte y Enter para abrir un tema.">
+    <div class="track" id="track">
+      <svg class="wire" id="wire" aria-hidden="true"></svg>
+      <ol class="nodes" id="nodes"></ol>
+    </div>
+  </div>
+</main>
+
+<footer class="dock">
+  <div class="dock__map" id="minimap" role="group" aria-label="Mapa de temas"></div>
+  <p class="dock__hint"><kbd>←</kbd><kbd>→</kbd> navegar <span>·</span> <kbd>Enter</kbd> abrir <span>·</span> arrastra o usa la rueda</p>
+  <p class="dock__votes">30 de 31 miembros votaron · el cable se ilumina hasta donde llegas</p>
+</footer>
+
+<div class="sheet" id="sheet" hidden>
+  <div class="sheet__bg" data-close></div>
+  <section class="sheet__panel" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+    <div class="sheet__bar">
+      <button class="nav-b" id="prevT" aria-label="Tema anterior">←</button>
+      <button class="nav-b" id="nextT" aria-label="Tema siguiente">→</button>
+      <span class="sheet__pos" id="sheetPos"></span>
+      <button class="nav-b nav-b--x" id="closeS" aria-label="Cerrar" data-close>Esc ✕</button>
+    </div>
+    <div class="sheet__body" id="sheetBody"></div>
+  </section>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
