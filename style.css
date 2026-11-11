@@ -288,7 +288,7 @@ h1 em{color:var(--red)}
 .detail .ex{font-size:13px;border-left:3px solid var(--red);padding:2px 0 2px 10px;color:rgba(244,238,223,.9)}
 .detail .ex b{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#ff8a70;display:block}
 .pkt{display:flex;flex-wrap:nowrap;margin-top:14px;min-height:38px;align-items:stretch;font-family:var(--f-mono);font-size:11px;font-weight:700;overflow-x:auto}
-.pkt span{padding:8px 9px;border:1.5px solid #14110d;animation:chip 300ms var(--ease-out) both;white-space:nowrap}
+.pkt span{padding:8px 9px;border:1.5px solid #14110d;animation:chip 900ms var(--ease-out) both;white-space:nowrap}
 @keyframes chip{from{opacity:0;transform:scale(.8)}}
 .pkt .c-eth{background:#6aa0ff;color:#0b1b3a}.pkt .c-ip{background:#ffd25e;color:#3a2a00}.pkt .c-tcp{background:#ff8a70;color:#3a0d00}.pkt .c-data{background:var(--cream);color:#14110d;flex:1;text-align:center}.pkt .c-fcs{background:#6aa0ff;color:#0b1b3a}.pkt .c-bits{background:#5ee0a0;color:#00301a;flex:1;text-align:center;letter-spacing:.2em}
 

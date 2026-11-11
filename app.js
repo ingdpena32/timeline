@@ -755,7 +755,7 @@ function dLayers(p, tb) {
         const bits = frame(st); if (bits) pkt.innerHTML = bits;
         sel(st); n++;
         if (n >= seq.length) { clearInterval(demoTimer); go.disabled = false; setTimeout(() => btns.forEach(b => b.classList.remove('flash')), 420); }
-      }, 480);
+      }, 2600);
     });
     pkt.innerHTML = '<span class="c-data">DATOS</span>';
   }
